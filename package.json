@@ -1,0 +1,52 @@
+{
+  "name": "dsh-sidebar-settings-button",
+  "version": "0.2.0",
+  "description": "DSH plugin: the Settings button moves into the sidebar header, immediately before Plugins, opening the native Settings panel in one click.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nishikinov/dsh-sidebar-settings-button.git"
+  },
+  "homepage": "https://github.com/Nishikinov/dsh-sidebar-settings-button#readme",
+  "bugs": {
+    "url": "https://github.com/Nishikinov/dsh-sidebar-settings-button/issues"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/bundle.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "client",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "scripts": {
+    "check": "node --check src/index.js && node --check client/bundle.js",
+    "test": "node test/bundle.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "settings",
+    "web"
+  ]
+}

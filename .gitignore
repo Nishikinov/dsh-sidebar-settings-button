@@ -1,0 +1,12 @@
+# Nothing installed or built belongs in the repository: the plugin ships as plain
+# source (no build step) and is installed into a DSH profile as a linked folder
+# or a packed tarball.
+node_modules/
+*.tgz
+*.log
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

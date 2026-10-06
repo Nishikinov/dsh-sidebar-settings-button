@@ -1,0 +1,6 @@
+# The plugin ships plain JS/YAML/Markdown; keep LF in the repository regardless
+# of the committer's core.autocrlf, so installs and diffs stay byte-stable.
+* text=auto eol=lf
+
+*.png binary
+*.ico binary

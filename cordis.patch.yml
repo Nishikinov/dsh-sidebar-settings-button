@@ -1,0 +1,11 @@
+# dsh-sidebar-settings-button bundle patch: mounts the plugin into the profile.
+#
+# The Host half is a no-op stub, but the web shell discovers plugin client
+# bundles by scanning ENABLED Loader entries, so this insert is what makes the
+# browser load `client/bundle.js`. It must land in the host composition (this
+# insert), never inside an agent preset.
+#
+# Install: `dsh plugin --profile <name> add <path-or-package>`
+- insert:
+    - id: dsh-sidebar-settings-button
+      name: dsh-sidebar-settings-button
